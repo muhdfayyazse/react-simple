@@ -8,9 +8,8 @@ const CoursesPage = (props)=>{
     const [courses, setCourses] = useState([]);
 
     useEffect(()=> getCourses().then(c=> setCourses(c)),[]);            
-    const handleDelete = (event)=>{
-        //debugger;
-        //deleteCourse(id).then(res=>props.history.push("/courses"))
+    const handleDelete = (courseId)=>{
+        deleteCourse(courseId).then(res=>getCourses().then(c=> setCourses(c)))
     }
 
     return (

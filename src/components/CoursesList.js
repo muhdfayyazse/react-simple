@@ -21,7 +21,7 @@ const CoursesList = (props) => {
                                <td><Link to={"/course/"+c.slug}>{c.title}</Link></td>
                                <td>{c.authorId}</td>
                                <td>{c.category}</td>
-                               <td><input type="button" value="Delete" className="btn btn-primary" onClick={props.onDelete(c.id)} /></td>
+                               <td><input type="button" value="Delete" className="btn btn-primary" onClick={()=>props.onDelete(c.id)} /></td>
                             </tr>     
                         );
                     })            
